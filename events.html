@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Soudha 2025 - The ultimate college fest organized by JNTUK Civil Engineering students. Join us for exciting events, competitions, and celebrations!">
+    <meta name="keywords" content="Soudha 2025, JNTUK Civil Fest, Civil Engineering Fest, College Fest, Engineering Events, Technical Fest, Cultural Fest, JNTUK Events, soudha, soudha2025, Soudha">
+    <meta name="author" content="Tarun varaha sai">
+    <meta property="og:title" content="Soudha 2025 - JNTUK Civil Engineering Fest">
+    <meta property="og:description" content="Be part of Soudha 2025, the grand college fest of JNTUK Civil Engineering students. Explore technical and cultural events, and make unforgettable memories!">
+    <meta property="og:url" content="https://www.soudha2025.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.soudha2025.com/assets/soudha2k25.png">
+    <title>SOUDHA 2K25 - Events</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "Soudha 2025",
+          "description": "The ultimate college fest organized by JNTUK Civil Engineering students featuring technical and cultural events.",
+          "startDate": "2025-03-15",
+          "endDate": "2025-03-17",
+          "location": {
+            "@type": "Place",
+            "name": "JNTUK Campus",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Kakinada",
+              "addressRegion": "Andhra Pradesh",
+              "addressCountry": "IN"
+            }
+          },
+          "image": "https://www.soudha2025.com/assets/soudha2k25.png",
+          "organizer": {
+            "@type": "Organization",
+            "name": "JNTUK Civil Engineering Department",
+            "url": "https://www.jntuk.edu.in"
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            background-size: cover;
+            background-position: center;
+        }
+        .event-card {
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .workshop-card {
+            transition: all 0.3s ease;
+        }
+        .workshop-card:hover {
+            transform: scale(1.03);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .animate-glow {
+            animation: glowPulse 2s infinite;
+        }
+        
+        /* Glass morphism effect */
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Stylized scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #ff5f6d, #6e48aa);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class=" bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Jntuk-logo.png" alt="JNTU Logo" class="h-12 w-12">
+                    <div>
+                        <h1 class="text-lg font-bold text-blue-900 md:text-xl">SOUDHA 2K25</h1>
+                        <p class="text-xs text-gray-600 hidden md:block">JNTU Kakinada</p>
+                    </div>
+                    <img src="https://pbs.twimg.com/profile_images/1090979564103262209/peeyXMo9_400x400.jpg" alt="JNTU Logo" class="scale-150 h-12 w-12">
+                </div>
+                
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#" class="hover:text-blue-300 transition">Home</a></li>
+                    <li><a href="#technical" class="hover:text-blue-300 transition">Technical Events</a></li>
+                    <li><a href="#non-technical" class="hover:text-blue-300 transition">Non-Technical Events</a></li>
+                    <li><a href="#workshops" class="hover:text-blue-300 transition">Workshops</a></li>
+                    <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
+                </ul>
+                
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <a href="#register" class="registerNowBtn hidden md:block bg-blue-700 hover:bg-blue-800 text-white py-2 px-6 rounded-full font-medium transition-all duration-300">Register Now</a>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden ">
+                <div class="flex flex-col space-y-4 py-4 px-2">
+                    <a href="/" class="text-blue-900 hover:text-blue-700 font-medium">Home</a>
+                    <a href="#technical" class="text-blue-900 hover:text-blue-700 font-medium">Technical Events</a>
+                    <a href="#non-technical" class="text-blue-900 hover:text-blue-700 font-medium">Non-Technical Events</a>
+                    <a href="#workshops" class="text-blue-900 hover:text-blue-700 font-medium">Workshops</a>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium">Contact</a>
+                    <a href="#register" class="registerNowBtn bg-blue-700 hover:bg-blue-800 text-white py-2 px-6 rounded-full font-medium transition-all duration-300 text-center">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen overflow-hidden bg-black">
+        <!-- Dynamic background with geometric shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Gradient background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-blue-900 to-black opacity-95"></div>
+    
+            <!-- Glowing orbs -->
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-blue-500 blur-3xl opacity-20"></div>
+            <div class="absolute bottom-1/4 right-1/3 w-64 h-64 rounded-full bg-purple-500 blur-3xl opacity-15"></div>
+            <div class="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-red-500 blur-3xl opacity-20"></div>
+        </div>
+    
+        <!-- Main content container -->
+        <div class="container mx-auto px-4 mt-8 md:mt-4 relative z-10 min-h-[130vh] md:min-h-screen flex items-center justify-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-28 items-center">
+                <!-- Left content area -->
+                <div class="relative z-20 lg:col-span-6">
+                    <!-- Tech-themed decorative elements -->
+                    <div class="mb-6 inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+                        <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                        <span class="text-white/80 uppercase tracking-widest text-xs font-medium">Live & Interactive</span>
+                    </div>
+    
+                    <!-- Main heading with futuristic styling -->
+                    <h1 class="text-5xl md:text-7xl font-bold leading-none mb-4">
+                        <span class="text-white inline-block transform hover:translate-x-1 transition-transform duration-300">SOU</span><span class="text-white inline-block transform hover:-translate-y-1 transition-transform duration-300">DHA</span>
+                        <span class="relative mt-2 inline-block">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500 inline-block transform hover:scale-105 transition-transform duration-300">2K25</span>
+                            <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-purple-500 rounded-full"></span>
+                        </span>
+                    </h1>
+                    <h3 class="text-white text-xl">DEPARTMENT OF CIVIL ENGINEERING</h3>
+    
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 mt-6">
+                        <p class="text-xl md:text-2xl font-medium text-white/90 mb-2">Crafting your vision</p>
+                        <p class="text-lg text-white/70 mb-6">A Two-Day National Level Technical Symposium</p>
+    
+                        <!-- Date with futuristic styling -->
+                        <div class="inline-flex items-center space-x-3 mb-6">
+                            <div class="h-10 w-1 bg-gradient-to-b from-red-500 to-purple-500 rounded-full"></div>
+                            <p class="text-xl font-bold text-white">22<sup class="text-sm">nd</sup> & 23<sup class="text-sm">rd</sup> March 2025</p>
+                        </div>
+    
+                        <!-- CTA buttons with hover effects -->
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                            <a href="#register" class="registerNowBtn group relative overflow-hidden bg-gradient-to-r from-red-500 to-purple-500 text-white py-4 px-8 rounded-lg font-medium text-center transition-all duration-300">
+                                <span class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></span>
+                                <span class="relative flex items-center justify-center">
+                                    Register Now
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#events" class="relative overflow-hidden bg-transparent text-white border border-white/30 hover:border-white/50 py-4 px-8 rounded-lg font-medium text-center transition-all duration-300 hover:bg-white/5">
+                                <span class="relative flex items-center justify-center">
+                                    Explore Events
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Stats with futuristic design -->
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/60 text-sm">Expected Participants</p>
+                                    <p class="text-2xl font-bold text-white">1000<span class="text-purple-400">+</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/60 text-sm">Technical Events</p>
+                                    <p class="text-2xl font-bold text-white">15<span class="text-red-400">+</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Countdown for mobile  -->
+                    <div class="md:hidden grid grid-cols-1 mt-6 flex justify-center">
+                        <div class="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl w-full max-w-sm">
+                            <h3 class="text-2xl font-extrabold text-white text-center mb-6 tracking-wide">
+                                Countdown to Event 🎉
+                            </h3>
+                            <div class="grid grid-cols-4 gap-3">
+                                <!-- Days -->
+                                <div class="flex flex-col items-center">
+                                    <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-5 shadow-md w-16 h-16 flex justify-center items-center">
+                                        <span class="text-3xl font-bold text-white neon-glow days" id="days">15</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/70 uppercase tracking-wider">Days</p>
+                                </div>
+                    
+                                <!-- Hours -->
+                                <div class="flex flex-col items-center">
+                                    <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-5 shadow-md w-16 h-16 flex justify-center items-center">
+                                        <span class="text-3xl font-bold text-white neon-glow hours" id="hours">08</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/70 uppercase tracking-wider">Hours</p>
+                                </div>
+                    
+                                <!-- Minutes -->
+                                <div class="flex flex-col items-center">
+                                    <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-md w-16 h-16 flex justify-center items-center">
+                                        <span class="text-3xl font-bold text-white neon-glow minutes" id="minutes">45</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/70 uppercase tracking-wider">Mins</p>
+                                </div>
+                    
+                                <!-- Seconds -->
+                                <div class="flex flex-col items-center">
+                                    <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-5 shadow-md w-16 h-16 flex justify-center items-center">
+                                        <span class="text-3xl font-bold text-white neon-glow seconds" id="seconds">30</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/70 uppercase tracking-wider">Secs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        /* Neon glow effect */
+                        .neon-glow {
+                            text-shadow: 0 0 5px #ff5f6d, 0 0 10px #ff5f6d, 0 0 15px #ff5f6d;
+                            animation: glow 1.5s infinite alternate;
+                        }
+                    
+                        /* Smooth flip animation for numbers */
+                        @keyframes flip {
+                            0% { transform: rotateX(0); opacity: 1; }
+                            50% { transform: rotateX(90deg); opacity: 0.5; }
+                            100% { transform: rotateX(0); opacity: 1; }
+                        }
+                    </style>
+                                        
+                </div>
+    
+                <!-- Right content area -->
+                <div class="relative mx-auto max-w-lg lg:col-span-6 lg:block hidden">
+                    <!-- Image container with borders -->
+                    <div class="relative">
+                        <!-- Animated border effect -->
+                        <div class="absolute inset-0 rounded-lg border border-white/20 backdrop-blur-sm z-0">
+                            <div class="absolute inset-0 rounded-lg overflow-hidden">
+                                <div class="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-purple-500 animate-gradient-x"></div>
+                                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-red-500 to-transparent animate-gradient-x"></div>
+                                <div class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-blue-500 to-purple-500 animate-gradient-y"></div>
+                                <div class="absolute right-0 bottom-0 h-full w-1 bg-gradient-to-b from-purple-500 via-blue-500 to-transparent animate-gradient-y"></div>
+                            </div>
+                        </div>
+    
+                        <!-- Main image -->
+                        <div class="relative bg-black/50 backdrop-blur-sm p-3 rounded-lg overflow-hidden z-10">
+                            <img src="./assets/soudha2k25.png" alt="Tech symposium innovation showcase" class="rounded-md object-cover w-full h-[450px] transition-opacity duration-300">
+    
+                            <!-- Image overlay mask effect -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent rounded-md mix-blend-overlay"></div>
+    
+                            <!-- Glitch effect overlays -->
+                            <div class="absolute inset-0 bg-red-500/10 mix-blend-screen rounded-md transform translate-x-1 translate-y-1 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-blue-500/10 mix-blend-screen rounded-md transform -translate-x-1 -translate-y-1 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Floating countdown element -->
+                    <div class="absolute -top-12 -right-24 bg-black/40 backdrop-blur-lg rounded-lg border border-white/10 overflow-hidden shadow-2xl z-20">
+                        <div class="p-2 bg-gradient-to-r from-red-500 to-purple-500">
+                            <h3 class="text-lg font-bold text-white text-center">Countdown</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between space-x-2">
+                                <div class="text-center">
+                                    <div class="bg-white/5 backdrop-blur-md rounded-md py-3 px-4 border border-white/10">
+                                        <span class="text-2xl font-bold text-white days">15</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/60">Days</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-white/5 backdrop-blur-md rounded-md py-3 px-4 border border-white/10">
+                                        <span class="text-2xl font-bold text-white hours">08</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/60">Hours</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-white/5 backdrop-blur-md rounded-md py-3 px-4 border border-white/10">
+                                        <span class="text-2xl font-bold text-white minutes">45</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-white/60">Mins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <script>
+                        const eventDate = new Date("March 22, 2025 00:00:00").getTime();
+                    
+                        function updateTimers() {
+                            const now = new Date().getTime();
+                            const distance = eventDate - now;
+                    
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                            // Select all elements with the same class and update them
+                            document.querySelectorAll(".days").forEach(el => el.innerText = days);
+                            document.querySelectorAll(".hours").forEach(el => el.innerText = hours);
+                            document.querySelectorAll(".minutes").forEach(el => el.innerText = minutes);
+                            document.querySelectorAll(".seconds").forEach(el => el.innerText = seconds);
+                        }
+                    
+                        setInterval(updateTimers, 1000);
+                    </script>
+    
+                    <!-- Circuit pattern overlay on image -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 opacity-20 pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+                            <g fill="none" stroke="white" stroke-width="0.3">
+                                <path d="M10,10 L90,10 L90,90 L10,90 Z" />
+                                <path d="M20,20 L80,20 L80,80 L20,80 Z" />
+                                <path d="M30,30 L70,30 L70,70 L30,70 Z" />
+                                <path d="M10,10 L30,30" />
+                                <path d="M90,10 L70,30" />
+                                <path d="M10,90 L30,70" />
+                                <path d="M90,90 L70,70" />
+                                <path d="M50,10 L50,30" />
+                                <path d="M50,70 L50,90" />
+                                <path d="M10,50 L30,50" />
+                                <path d="M70,50 L90,50" />
+                                <circle cx="50" cy="50" r="5" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modified Modal Overlay with better mobile responsiveness -->
+        <div id="modalOverlay" class="fixed inset-0 bg-black/70 z-40 hidden items-center justify-center z-50 overflow-y-auto">
+            <div class="animate-slide-up min-h-screen flex items-center justify-center p-4">
+                <!-- Modal Container - Improved for mobile -->
+                <div class="relative w-full max-w-md mx-auto glass-effect bg-indigo-900/60 border border-white/20 rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Modal Header -->
+                    <div class="px-4 py-3 border-b border-white/10 bg-gradient-to-r from-blue-900 to-indigo-900 flex justify-between items-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center">
+                            <div class="w-3 h-3 rounded-full bg-purple-500 mr-2 animate-pulse"></div>
+                            <span id="modalTitle">SOUDHA2K25 Registration</span>
+                        </h3>
+                        <button id="closeModalBtn" class="text-white/70 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content - Scrollable container -->
+                    <div class="overflow-y-auto max-h-screen md:max-h-[80vh]">
+                        <!-- Modal Options -->
+                        <div id="modalOptions" class="p-4 sm:p-6 bg-gradient-to-br from-indigo-900/50 to-blue-900/50">
+                            <div class="grid grid-cols-1 gap-4">
+                                <button id="eventsBtn" class="registration-option relative overflow-hidden bg-indigo-800/50 hover:bg-indigo-700/70 border border-white/10 hover:border-white/30 rounded-xl p-4 sm:p-6 text-left transition-all duration-300 group">
+                                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-blue-500/20 transform rotate-45 translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+                                    <h4 class="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">Registration for Events & Workshops</h4>
+                                    <p class="text-white/70 text-sm relative z-10">Register for technical, non-technical events and workshops</p>
+                                    <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                
+                                <button id="accommodationBtn" class="registration-option relative overflow-hidden bg-indigo-800/50 hover:bg-indigo-700/70 border border-white/10 hover:border-white/30 rounded-xl p-4 sm:p-6 text-left transition-all duration-300 group">
+                                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-500/20 to-purple-500/20 transform rotate-45 translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+                                    <h4 class="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">Accommodation & Food</h4>
+                                    <p class="text-white/70 text-sm relative z-10">Reserve accommodation and food during the symposium</p>
+                                    <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Events & Workshops Content (Initially Hidden) -->
+                        <div id="eventsContent" class="hidden">
+                            <div class="p-4 sm:p-6">
+                                <div class="mb-4 sm:mb-6">
+                                    <h3 class="text-lg sm:text-xl font-bold text-center text-white bg-blue-600/30 py-2 rounded-lg mb-4 animate-glow">MAKE SURE TO REMEMBER</h3>
+                                    
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is mandatory to participate in Technical events and Workshops.</p>
+                                        </li>
+
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is not mandatory for Non Technical Events</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">And students who pay the basic registration fee are allowed to register for Accommodation and food.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will provide an ID card required for fest entry in our college, for the students who pay the Basic Registration Fee.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Basic Registration is mandatory for all students, including team events.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will accept Spots registrations also.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Please pay the fee correctly and co-operate with us.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">For any queries for team registrations or events, please contact <span class="font-bold">J. PAVAN KUMAR</span> at <span class="font-bold text-blue-300">9347967873</span>.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex justify-center mt-6">
+                                    <a href="events.html" class="proceed-btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-6 rounded-lg font-bold text-center transition-all duration-300 animate-glow text-sm">
+                                        <span class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></span>
+                                        <span class="relative flex items-center justify-center">
+                                            PROCEED TO REGISTER
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accommodation & Food Content (Initially Hidden) -->
+                        <div id="accommodationContent" class="hidden">
+                            <div class="p-4 sm:p-6">
+                                <div class="mb-4 sm:mb-6">
+                                    <h3 class="text-lg sm:text-xl font-bold text-center text-white bg-blue-600/30 py-2 rounded-lg mb-4 animate-glow">MAKE SURE TO REMEMBER</h3>
+                                    
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is mandatory to get access to pay fee for accommodation and food.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will confirm the slots for the students who paid fee for accommodation and food along with basic registration fee.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Accommodation fee: ₹200/-</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Food (1 Day): ₹200/-</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Food (2 Days): ₹300/- (VEG) | ₹350/- (NON-VEG)</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm font-bold"><span class="font-bold">COMBO Offer:</span> Food & Accommodation: ₹550/- (VEG) | ₹600/- (NON-VEG)</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm font-bold"><span class="font-bold">Note:</span> If you select COMBO, registration fee is free.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will accept Spots registrations also.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Please pay the fee correctly and co-operate with us.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">For any queries for team registrations or events, please contact <span class="font-bold">K.Shriram prasad</span> at <span class="font-bold text-blue-300">9959319609</span>.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex justify-center mt-6">
+                                    <a href="tel:+919959319609" class="proceed-btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-6 rounded-lg font-bold text-center transition-all duration-300 animate-glow text-sm">
+                                        <span class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></span>
+                                        <span class="relative flex items-center justify-center">
+                                            CALL TO BOOK SLOT
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back button (Initially Hidden) -->
+                    <div id="backButtonContainer" class="hidden px-4 py-3 border-t border-white/10 bg-indigo-900/70">
+                        <button id="backButton" class="text-white/70 hover:text-white transition-colors flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            Back to Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Custom style for animations -->
+        <style>
+            @keyframes gradient-x {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+            @keyframes gradient-y {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(100%); }
+            }
+            .animate-gradient-x {
+                animation: gradient-x 3s infinite;
+            }
+            .animate-gradient-y {
+                animation: gradient-y 3s infinite;
+            }
+        </style>
+    </section>
+
+    <!-- Technical Events Section -->
+    <section id="technical" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-blue-900 mb-2">Technical Events</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dive into a world of thrilling technical challenges! Participate in dynamic events to ignite your passion and showcase your engineering skills.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- LAB TOUR -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center overflow-hidden">
+                        <img src="assets/lab-tour.png" alt="lab-tour">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">LAB TOUR</h3>
+                        <p class="text-gray-600 mb-4">"Unlock the wonders of Civil Engineering!"</p>
+                        <p class="text-gray-700 mb-6">Explore cutting-edge civil engineering laboratories and gain hands-on experience with advanced equipment and techniques.</p>
+                        <a href="event-page.html?id=lab-tour" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- MODEL EXHIBO -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-green-700 flex items-center justify-center overflow-hidden">
+                        <img src="assets/model-exhibo.png" alt="model exhibo">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">MODEL EXHIBO</h3>
+                        <p class="text-gray-600 mb-4">"Where creativity meets engineering brilliance!"</p>
+                        <p class="text-gray-700 mb-6">Showcase your innovative civil engineering models and prototypes in this exciting exhibition challenge.</p>
+                        <a href="event-page.html?id=model-exhibo" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- CONCRETE COMBAT -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center overflow-hidden">
+                        <img src="assets/concrete-combat.png" alt="">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">CONCRETE COMBAT</h3>
+                        <p class="text-gray-600 mb-4">"Stronger, tougher, unbreakable – just like your ideas!"</p>
+                        <p class="text-gray-700 mb-6">Compete to design and create the strongest, most innovative concrete mix in this intensive engineering challenge.</p>
+                        <a href="event-page.html?id=concrete-combat" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- PPT -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-red-700 flex items-center justify-center overflow-hidden">
+                        <img src="assets/ppt.png" alt="ppt">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">PPT</h3>
+                        <p class="text-gray-600 mb-4">"Present. Persuade. Prevail!"</p>
+                        <p class="text-gray-700 mb-6">Showcase your research and innovative ideas through compelling presentations in this competitive forum.</p>
+                        <a href="event-page.html?id=ppt" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- POSTER PRESENTATION -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center overflow-hidden">
+                        <img src="assets/poster-presentation.png" alt="poster-presentation">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">POSTER PRESENTATION</h3>
+                        <p class="text-gray-600 mb-4">"Visualize ideas, inspire minds!"</p>
+                        <p class="text-gray-700 mb-6">Transform complex engineering concepts into visually compelling posters that communicate your innovative solutions.</p>
+                        <a href="event-page.html?id=poster-presentation" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- ELEVATE -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center overflow-hidden">
+                        <img src="assets/elevate.png" alt="elevate">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">ELEVATE</h3>
+                        <p class="text-gray-600 mb-4">"Rise above, innovate beyond!"</p>
+                        <p class="text-gray-700 mb-6">Challenge yourself to develop elevated structural designs that push the boundaries of conventional engineering.</p>
+                        <a href="event-page.html?id=elevate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- AUTO CAD -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-indigo-700 flex items-center justify-center overflow-hidden">
+                        <img src="assets/autocad.png" alt="auto cad">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">AUTO CAD</h3>
+                        <p class="text-gray-600 mb-4">"Design the future, one line at a time!"</p>
+                        <p class="text-gray-700 mb-6">Test your CAD skills in this competitive design challenge, creating precise and innovative digital models.</p>
+                        <a href="event-page.html?id=autocad" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- GEO MENSURA -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-green-600 flex items-center justify-center overflow-hidden">
+                        <img src="assets/geo-mensura.png" alt="geo-mensura">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">GEO MENSURA</h3>
+                        <p class="text-gray-600 mb-4">"Mapping precision, shaping the world!"</p>
+                        <p class="text-gray-700 mb-6">Demonstrate your surveying and mapping skills in this competitive geospatial challenge.</p>
+                        <a href="event-page.html?id=geo-mensura" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- MODEL MAKING -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-amber-600 flex items-center justify-center overflow-hidden">
+                        <img src="assets/master-builder.png" alt="master builder">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">MASTER BUILDER</h3>
+                        <p class="text-gray-600 mb-4">"Crafting concepts into reality!"</p>
+                        <p class="text-gray-700 mb-6">Showcase your creativity and craftsmanship by building physical models of innovative civil engineering solutions.</p>
+                        <a href="event-page.html?id=master-builder" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-Technical Events Section -->
+    <section id="non-technical" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-blue-900 mb-2">Non-Technical Events</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Showcase your creativity and skills beyond technical expertise. Participate in these exciting non-technical events and explore your talents!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- FREE FIRE -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-red-600 flex items-center justify-center overflow-hidden">
+                        <img src="assets/free-fire.png" alt="Free Fire">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">FREE FIRE</h3>
+                        <p class="text-gray-600 mb-4">"Survive, shoot, dominate!"</p>
+                        <p class="text-gray-700 mb-6">Test your gaming skills and strategic thinking in this intense battle royale gaming competition.</p>
+                        <a href="event-page.html?id=free-fire" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- PHOTOGRAPHY -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center overflow-hidden">
+                        <img src="assets/photography.png" alt="photography">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">PHOTOGRAPHY</h3>
+                        <p class="text-gray-600 mb-4">"Freeze the moment, frame the magic!"</p>
+                        <p class="text-gray-700 mb-6">Capture the essence of engineering and architecture through your lens in this creative photography contest.</p>
+                        <a href="event-page.html?id=photography" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- BGMI -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center overflow-hidden">
+                        <img src="assets/bgmi.png" alt="BGMI">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">BGMI</h3>
+                        <p class="text-gray-600 mb-4">"One shot, one chance, one winner!"</p>
+                        <p class="text-gray-700 mb-6">Compete against fellow students in this tactical battle royale game that tests your reflexes and strategy.</p>
+                        <a href="event-page.html?id=bgmi" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">Workshops</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-lg max-w-2xl mx-auto">Unlock the potential of emerging technologies through our expertly designed workshops. Engage in hands-on learning, acquire practical skills and elevate your expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <!-- Green Technologies -->
+                <div class="workshop-card bg-gradient-to-br from-green-700 to-green-900 rounded-xl overflow-hidden shadow-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="rounded-full bg-white p-3 mr-4">
+                            <i class="fas fa-leaf text-2xl text-green-700"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">WORKSHOP ON WORLD WATER DAY</h3>
+                    </div>
+                    <p class="text-lg mb-6">"Sustainability starts with innovation. Let's build a greener future together!"</p>
+                    <p class="mb-8">Explore cutting-edge sustainable building materials, renewable energy integration in construction, and eco-friendly design principles that minimize environmental impact.</p>
+                    <a href="event-page.html?id=world-water-day" class="inline-block bg-white text-green-700 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg transition">KNOW MORE</a>
+                </div>
+
+                <!-- Advanced Technologies in Construction -->
+                <div class="workshop-card bg-gradient-to-br from-blue-700 to-blue-900 rounded-xl overflow-hidden shadow-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="rounded-full bg-white p-3 mr-4">
+                            <i class="fas fa-hard-hat text-2xl text-blue-700"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">ADVANCED TECHNOLOGIES IN CONSTRUCTION</h3>
+                    </div>
+                    <p class="text-lg mb-6">"Revolutionizing the way we build. Step into the future of construction!"</p>
+                    <p class="mb-8">Learn about cutting-edge construction methods, automated building systems, and how digital technologies are transforming the construction industry.</p>
+                    <a href="event-page.html?id=advanced-technologies-in-construction" class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg transition">KNOW MORE</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 justify-center">
+                <!-- BIM -->
+                <div class="workshop-card bg-gradient-to-br from-purple-700 to-purple-900 rounded-xl overflow-hidden shadow-xl p-6">
+                    <div class="flex md:block md:text-center mb-2">
+                        <div class="inline-block rounded-full bg-white p-3 mr-4 mb-3 md:mr-0">
+                            <i class="fas fa-cube text-2xl text-purple-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-2">BIM</h3>
+                    </div>
+                    <p class="md:text-center text-lg mb-4">"Transforming designs into smarter realities!"</p>
+                    <p class="md:text-center mb-6">Master Building Information Modeling to create comprehensive digital representations of physical and functional characteristics of facilities.</p>
+                    <div class="md:text-center">
+                        <a href="event-page.html?id=bim" class="inline-block bg-white text-purple-700 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg transition">KNOW MORE</a>
+                    </div>
+                </div>
+
+                <!-- PRIMEVARA -->
+                <!-- <div class="workshop-card bg-gradient-to-br from-red-700 to-red-900 rounded-xl overflow-hidden shadow-xl p-6">
+                    <div class="text-center mb-4">
+                        <div class="inline-block rounded-full bg-white p-3 mb-3">
+                            <i class="fas fa-tasks text-2xl text-red-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">PRIMEVARA</h3>
+                    </div>
+                    <p class="text-center text-lg mb-4">"Plan smart, build faster, succeed better!"</p>
+                    <p class="text-center mb-6">Master this industry-standard project management software to effectively plan, schedule, and control complex engineering projects.</p>
+                    <div class="text-center">
+                        <a href="event-page.html?id=primevera" class="inline-block bg-white text-red-700 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg transition">KNOW MORE</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-800 to-purple-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Participate?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Don't miss this exclusive opportunity to elevate your skills, connect with brilliant minds, and shape your future success. Limited spots available!</p>
+            <a href="#" class="registerNowBtn inline-block bg-white text-blue-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">REGISTER NOW</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-2">Contact Us</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">For more information and queries about the events, feel free to contact our team.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+                <div class="w-full h-96 rounded-lg shadow-md md:h-auto">
+                    <iframe 
+                        class="w-full h-full rounded-lg shadow-lg"
+                        src="https://www.google.com/maps?q=Department+of+Civil+Engineering,+JNTUK&hl=en&z=17&output=embed"
+                        allowfullscreen="true" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>                              
+
+                <div class="bg-gray-100 rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">JAGILINKI PAVAN KUMAR</p>
+                                <p class="text-gray-600">9347967873</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">KOTIKALA SUBHASH CHANDRA</p>
+                                <p class="text-gray-600">8247620778</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">BOBBILI ASLESH KUMAR</p>
+                                <p class="text-gray-600">9347177536</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">TANNI RAJU</p>
+                                <p class="text-gray-600">9676470580</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">BODDU RAVI</p>
+                                <p class="text-gray-600">7993883855</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Follow Us</h3>
+                    <div class="flex items-center mb-6">
+                        <a href="https://www.instagram.com/soudhajntuk" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fab fa-instagram text-2xl text-pink-600 mr-3"></i>
+                            Soudha2k25
+                        </a>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Email Us</h3>
+                    <div class="flex items-center mb-6">
+                        <a href="" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                            soudha2k25@gmail.com
+                        </a>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-blue-900 mb-4">Department</h3>
+                        <p class="text-gray-700">Department of Civil Engineering</p>
+                        <p class="text-gray-700 font-semibold">Jawaharlal Nehru Technological University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">© 2025 SOUDHA - JNTUK University College of Engineering Kakinada. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <!-- Keep the script section as is, with minor updates -->
+    <script>
+        // Modal functionality
+        const modalOverlay = document.getElementById('modalOverlay');
+        const registerNowButtons = document.querySelectorAll('.registerNowBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const eventsBtn = document.getElementById('eventsBtn');
+        const accommodationBtn = document.getElementById('accommodationBtn');
+        const eventsContent = document.getElementById('eventsContent');
+        const accommodationContent = document.getElementById('accommodationContent');
+        const modalOptions = document.getElementById('modalOptions');
+        const backButton = document.getElementById('backButton');
+        const backButtonContainer = document.getElementById('backButtonContainer');
+        const modalTitle = document.getElementById('modalTitle');
+
+        // Open modal
+        registerNowButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modalOverlay.classList.remove('hidden');
+                modalOverlay.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            modalOverlay.classList.add('hidden');
+            modalOverlay.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+            // Reset to options view
+            showOptions();
+        });
+
+        // Also close when clicking outside the modal content
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModalBtn.click();
+            }
+        });
+
+        // Show events content
+        eventsBtn.addEventListener('click', () => {
+            modalOptions.classList.add('hidden');
+            eventsContent.classList.remove('hidden');
+            eventsContent.classList.add('animate-fade-in');
+            backButtonContainer.classList.remove('hidden');
+            modalTitle.textContent = 'Events & Workshops Registration';
+        });
+
+        // Show accommodation content
+        accommodationBtn.addEventListener('click', () => {
+            modalOptions.classList.add('hidden');
+            accommodationContent.classList.remove('hidden');
+            accommodationContent.classList.add('animate-fade-in');
+            backButtonContainer.classList.remove('hidden');
+            modalTitle.textContent = 'Accommodation & Food';
+        });
+
+        // Back to options
+        backButton.addEventListener('click', showOptions);
+
+        function showOptions() {
+            eventsContent.classList.add('hidden');
+            accommodationContent.classList.add('hidden');
+            modalOptions.classList.remove('hidden');
+            backButtonContainer.classList.add('hidden');
+            modalTitle.textContent = 'SOUDHA2K25 Registration';
+        }
+
+        // Add hover effects to buttons
+        document.querySelectorAll('.proceed-btn').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.classList.add('scale-105');
+                setTimeout(() => button.classList.remove('scale-105'), 300);
+            });
+        });
+
+        // Add click animation to all buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('scale-95');
+                setTimeout(() => this.classList.remove('scale-95'), 100);
+            });
+        });
+    </script>
+    <script>
+        // Toggle Mobile Menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

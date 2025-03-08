@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Soudha 2025 - The ultimate college fest organized by JNTUK Civil Engineering students. Join us for exciting events, competitions, and celebrations!">
+    <meta name="keywords" content="Soudha 2025, JNTUK Civil Fest, Civil Engineering Fest, College Fest, Engineering Events, Technical Fest, Cultural Fest, JNTUK Events, soudha, soudha2025">
+    <meta name="author" content="Tarun varaha sai">
+    <meta property="og:title" content="Soudha 2025 - JNTUK Civil Engineering Fest">
+    <meta property="og:description" content="Be part of Soudha 2025, the grand college fest of JNTUK Civil Engineering students. Explore technical and cultural events, and make unforgettable memories!">
+    <meta property="og:url" content="https://www.soudha2025.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.soudha2025.com/assets/soudha2k25.png">
+    <title>JNTUK Faculty Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+        }
+        .faculty-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            perspective: 1000px;
+        }
+        .faculty-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .section-heading {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md w-full z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Jntuk-logo.png" alt="JNTU Logo" class="h-12 w-12">
+                    <div>
+                        <h1 class="text-lg font-bold text-blue-900 md:text-xl">SOUDHA 2K25</h1>
+                        <p class="text-xs text-gray-600 hidden md:block">JNTU Kakinada</p>
+                    </div>
+                    <img src="https://pbs.twimg.com/profile_images/1090979564103262209/peeyXMo9_400x400.jpg" alt="JNTU Logo" class="scale-150 h-12 w-12">
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <a href="#register" class="registerNowBtn hidden md:block bg-blue-700 hover:bg-blue-800 text-white py-2 px-6 rounded-full font-medium transition-all duration-300">Register Now</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl h-full md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+                JNTUK Faculty Directory
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto font-light"></p>
+                Celebrating Academic Excellence
+            </p>
+        </header>
+
+        <div id="modalOverlay" class="fixed inset-0 bg-black/70 z-40 hidden items-center justify-center z-50 overflow-y-auto">
+            <div class="animate-slide-up min-h-screen flex items-center justify-center p-4">
+                <!-- Modal Container - Improved for mobile -->
+                <div class="relative w-full max-w-md mx-auto glass-effect bg-indigo-900/60 border border-white/20 rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Modal Header -->
+                    <div class="px-4 py-3 border-b border-white/10 bg-gradient-to-r from-blue-900 to-indigo-900 flex justify-between items-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center">
+                            <div class="w-3 h-3 rounded-full bg-purple-500 mr-2 animate-pulse"></div>
+                            <span id="modalTitle">SOUDHA2K25 Registration</span>
+                        </h3>
+                        <button id="closeModalBtn" class="text-white/70 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content - Scrollable container -->
+                    <div class="overflow-y-auto max-h-screen md:max-h-[80vh]">
+                        <!-- Modal Options -->
+                        <div id="modalOptions" class="p-4 sm:p-6 bg-gradient-to-br from-indigo-900/50 to-blue-900/50">
+                            <div class="grid grid-cols-1 gap-4">
+                                <button id="eventsBtn" class="registration-option relative overflow-hidden bg-indigo-800/50 hover:bg-indigo-700/70 border border-white/10 hover:border-white/30 rounded-xl p-4 sm:p-6 text-left transition-all duration-300 group">
+                                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-blue-500/20 transform rotate-45 translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+                                    <h4 class="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">Registration for Events & Workshops</h4>
+                                    <p class="text-white/70 text-sm relative z-10">Register for technical, non-technical events and workshops</p>
+                                    <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                
+                                <button id="accommodationBtn" class="registration-option relative overflow-hidden bg-indigo-800/50 hover:bg-indigo-700/70 border border-white/10 hover:border-white/30 rounded-xl p-4 sm:p-6 text-left transition-all duration-300 group">
+                                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-500/20 to-purple-500/20 transform rotate-45 translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+                                    <h4 class="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">Accommodation & Food</h4>
+                                    <p class="text-white/70 text-sm relative z-10">Reserve accommodation and food during the symposium</p>
+                                    <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Events & Workshops Content (Initially Hidden) -->
+                        <div id="eventsContent" class="hidden">
+                            <div class="p-4 sm:p-6">
+                                <div class="mb-4 sm:mb-6">
+                                    <h3 class="text-lg sm:text-xl font-bold text-center text-white bg-blue-600/30 py-2 rounded-lg mb-4 animate-glow">MAKE SURE TO REMEMBER</h3>
+                                    
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is mandatory to participate in Technical events and Workshops.</p>
+                                        </li>
+
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is not mandatory for Non Technical Events</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">And students who pay the basic registration fee are allowed to register for Accommodation and food.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will provide an ID card required for fest entry in our college, for the students who pay the Basic Registration Fee.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Basic Registration is mandatory for all students, including team events.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will accept Spots registrations also.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Please pay the fee correctly and co-operate with us.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">For any queries for team registrations or events, please contact <span class="font-bold">J. PAVAN KUMAR</span> at <span class="font-bold text-blue-300">9347967873</span>.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex justify-center mt-6">
+                                    <a href="events.html" class="proceed-btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-6 rounded-lg font-bold text-center transition-all duration-300 animate-glow text-sm">
+                                        <span class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></span>
+                                        <span class="relative flex items-center justify-center">
+                                            PROCEED TO REGISTER
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accommodation & Food Content (Initially Hidden) -->
+                        <div id="accommodationContent" class="hidden">
+                            <div class="p-4 sm:p-6">
+                                <div class="mb-4 sm:mb-6">
+                                    <h3 class="text-lg sm:text-xl font-bold text-center text-white bg-blue-600/30 py-2 rounded-lg mb-4 animate-glow">MAKE SURE TO REMEMBER</h3>
+                                    
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">The Basic Registration Fee is mandatory to get access to pay fee for accommodation and food.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will confirm the slots for the students who paid fee for accommodation and food along with basic registration fee.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Accommodation fee: ₹200/-</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Food (1 Day): ₹200/-</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Food (2 Days): ₹300/- (VEG) | ₹350/- (NON-VEG)</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm font-bold"><span class="font-bold">COMBO Offer:</span> Food & Accommodation: ₹550/- (VEG) | ₹600/- (NON-VEG)</p>
+                                        </li>
+                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm font-bold"><span class="font-bold">Note:</span> If you select COMBO, registration fee is free.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">We will accept Spots registrations also.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">Please pay the fee correctly and co-operate with us.</p>
+                                        </li>
+                                        
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mt-1 mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-white/90 text-sm">For any queries for team registrations or events, please contact <span class="font-bold">K.Shriram prasad</span> at <span class="font-bold text-blue-300">9959319609</span>.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex justify-center mt-6">
+                                    <a href="tel:+919959319609" class="proceed-btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-6 rounded-lg font-bold text-center transition-all duration-300 animate-glow text-sm">
+                                        <span class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></span>
+                                        <span class="relative flex items-center justify-center">
+                                            CALL TO BOOK SLOT
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back button (Initially Hidden) -->
+                    <div id="backButtonContainer" class="hidden px-4 py-3 border-t border-white/10 bg-indigo-900/70">
+                        <button id="backButton" class="text-white/70 hover:text-white transition-colors flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            Back to Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keep the script section as is, with minor updates -->
+        <script>
+            // Modal functionality
+            const modalOverlay = document.getElementById('modalOverlay');
+            const registerNowButtons = document.querySelectorAll('.registerNowBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const eventsBtn = document.getElementById('eventsBtn');
+            const accommodationBtn = document.getElementById('accommodationBtn');
+            const eventsContent = document.getElementById('eventsContent');
+            const accommodationContent = document.getElementById('accommodationContent');
+            const modalOptions = document.getElementById('modalOptions');
+            const backButton = document.getElementById('backButton');
+            const backButtonContainer = document.getElementById('backButtonContainer');
+            const modalTitle = document.getElementById('modalTitle');
+
+            // Open modal
+            registerNowButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modalOverlay.classList.remove('hidden');
+                    modalOverlay.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Close modal
+            closeModalBtn.addEventListener('click', () => {
+                modalOverlay.classList.add('hidden');
+                modalOverlay.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+                // Reset to options view
+                showOptions();
+            });
+
+            // Also close when clicking outside the modal content
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModalBtn.click();
+                }
+            });
+
+            // Show events content
+            eventsBtn.addEventListener('click', () => {
+                modalOptions.classList.add('hidden');
+                eventsContent.classList.remove('hidden');
+                eventsContent.classList.add('animate-fade-in');
+                backButtonContainer.classList.remove('hidden');
+                modalTitle.textContent = 'Events & Workshops Registration';
+            });
+
+            // Show accommodation content
+            accommodationBtn.addEventListener('click', () => {
+                modalOptions.classList.add('hidden');
+                accommodationContent.classList.remove('hidden');
+                accommodationContent.classList.add('animate-fade-in');
+                backButtonContainer.classList.remove('hidden');
+                modalTitle.textContent = 'Accommodation & Food';
+            });
+
+            // Back to options
+            backButton.addEventListener('click', showOptions);
+
+            function showOptions() {
+                eventsContent.classList.add('hidden');
+                accommodationContent.classList.add('hidden');
+                modalOptions.classList.remove('hidden');
+                backButtonContainer.classList.add('hidden');
+                modalTitle.textContent = 'SOUDHA2K25 Registration';
+            }
+
+            // Add hover effects to buttons
+            document.querySelectorAll('.proceed-btn').forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.classList.add('scale-105');
+                    setTimeout(() => button.classList.remove('scale-105'), 300);
+                });
+            });
+
+            // Add click animation to all buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.add('scale-95');
+                    setTimeout(() => this.classList.remove('scale-95'), 100);
+                });
+            });
+        </script>
+    
+        <!-- Custom style for animations -->
+        <style>
+            @keyframes gradient-x {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+            @keyframes gradient-y {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(100%); }
+            }
+            .animate-gradient-x {
+                animation: gradient-x 3s infinite;
+            }
+            .animate-gradient-y {
+                animation: gradient-y 3s infinite;
+            }
+        </style>
+
+        <div class="space-y-12">
+            <!-- Chief Patron Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Chief Patron</h2>
+                <div class="grid gap-8 lg:place-items-center">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/csrkPrasad.png" alt="Prof. CSRK PRASAD" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-800">Prof. CSRK PRASAD</h3>
+                        <p class="text-gray-600">Hon'ble Vice-Chancellor, JNTUK, Kakinada</p>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- Mentor Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Mentor</h2>
+                <div class="grid gap-8 lg:place-items-center">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/kvRamana.png" alt="Prof. Dr. K V RAMANA" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-green-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-green-800">Prof. Dr. K V RAMANA</h3>
+                        <p class="text-gray-600">Rector, JNTUK</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Patrons Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Patrons</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/RAVINDRANATH VANDRANGI.png" alt="Prof. Dr. RAVINDRANATH VANDRANGI" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-purple-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-800">Prof. Dr. RAVINDRANATH VANDRANGI</h3>
+                        <p class="text-gray-600">Registrar</p>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/KOTESWARA RAO.png" alt="Prof. Dr. D. KOTESWARA RAO" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-purple-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-800">Prof. Dr. D. KOTESWARA RAO</h3>
+                        <p class="text-gray-600">Officer on Special Duty</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Co-Patrons Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Co-Patrons</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/MOHAN RAO.png" alt="Prof. Dr. N. MOHAN RAO" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-red-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-red-800">Prof. Dr. N. MOHAN RAO</h3>
+                        <p class="text-gray-600">Principal (i/c), University College of Engineering Kakinada</p>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/DEEKSHITULU.png" alt="Prof. Dr. G.V.S.R. DEEKSHITULU" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-red-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-red-800">Prof. Dr. G.V.S.R. DEEKSHITULU</h3>
+                        <p class="text-gray-600">Professor of Mathematics & Vice-Principal i/c (Academics)</p>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/SWAROOPA RANI.png" alt="Prof. Dr. M. SWAROOPA RANI" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-red-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-red-800">Prof. Dr. M. SWAROOPA RANI</h3>
+                        <p class="text-gray-600">Professor of CE & Vice-Principal i/c (Administration)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chairman Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Chairman</h2>
+                <div class="grid gap-8 lg:place-items-center">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/KOTESWARA RAO.png" alt="Prof. Dr. D. KOTESWARA RAO" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-indigo-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-800">Prof. Dr. D. KOTESWARA RAO</h3>
+                        <p class="text-gray-600">Head of the Department</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Faculty Coordinators Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Faculty Coordinators</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/SAJIDA SULTHANA.png" alt="Asst. Prof. Ms. SAJIDA SULTHANA MOHAMMED" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-teal-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-teal-800">Asst. Prof. Ms. SAJIDA SULTHANA MOHAMMED</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/Shameem Bhanu.png" alt="Asst.Dr.S.Shameem Bhanu" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-teal-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-teal-800">Asst.Dr.S.Shameem Bhanu</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advisory Committee Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Advisory Committee</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/YESURATNAM.png" alt="Prof. Dr. G. YESURATNAM" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. G. YESURATNAM</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/RAVINDRA.png" alt="Prof. Dr. V RAVINDRA" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. V RAVINDRA</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/SUBBA RAO.png" alt="Prof. Dr. P SUBBA RAO" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. P SUBBA RAO</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/SWAROOPA RANI.png" alt="Prof. Dr. M SWAROOPA RANI" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. M SWAROOPA RANI</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/LAKSHMI.png" alt="Prof. Dr. V LAKSHMI" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. V LAKSHMI</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/VEMU SREENIVASULU.png" alt="Prof. Dr. VEMU SREENIVASULU" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. VEMU SREENIVASULU</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/KRISHNA RAO.png" alt="Prof. Dr. B. KRISHNA RAO" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. B. KRISHNA RAO</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/PADMA KUMARI.png" alt="Prof. Dr. K. PADMA KUMARI" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. K. PADMA KUMARI</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/MYNAR BABU.png" alt="Asst. Prof. Dr. P. MYNAR BABU" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Asst. Prof. Dr. P. MYNAR BABU</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Committee Section -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center section-heading">Technical Committee</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/MURALI KRISHNA.png" alt="Prof. Dr. K.V.S.G. MURALI KRISHNA" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. K.V.S.G. MURALI KRISHNA</h3>
+                    </div>
+                    <div class="faculty-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                        <img src="assets/faculty/K RAMU.png" alt="Prof. Dr. K RAMU" class="w-32 sm:w-48 h-32 sm:h-48 object-cover rounded-full mx-auto mb-4 border-4 border-cyan-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-cyan-800">Prof. Dr. K RAMU</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-2">Contact Us</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">For more information and queries about the events, feel free to contact our team.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+                <div class="w-full h-96 rounded-lg shadow-md md:h-auto">
+                    <iframe 
+                        class="w-full h-full rounded-lg shadow-lg"
+                        src="https://www.google.com/maps?q=Department+of+Civil+Engineering,+JNTUK&hl=en&z=17&output=embed"
+                        allowfullscreen="true" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>                              
+
+                <div class="bg-gray-100 rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">JAGILINKI PAVAN KUMAR</p>
+                                <p class="text-gray-600">9347967873</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">KOTIKALA SUBHASH CHANDRA</p>
+                                <p class="text-gray-600">8247620778</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">BOBBILI ASLESH KUMAR</p>
+                                <p class="text-gray-600">9347177536</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">TANNI RAJU</p>
+                                <p class="text-gray-600">9676470580</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user text-blue-600 mr-3"></i>
+                            <div>
+                                <p class="font-medium">BODDU RAVI</p>
+                                <p class="text-gray-600">7993883855</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-8 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Follow Us</h3>
+                    <div class="flex items-center mb-6">
+                        <a href="https://www.instagram.com/soudhajntuk" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fab fa-instagram text-2xl text-pink-600 mr-3"></i>
+                            Soudha2k25
+                        </a>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Email Us</h3>
+                    <div class="flex items-center mb-6">
+                        <a href="" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                            soudha2k25@gmail.com
+                        </a>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-blue-900 mb-4">Department</h3>
+                        <p class="text-gray-700">Department of Civil Engineering</p>
+                        <p class="text-gray-700 font-semibold">Jawaharlal Nehru Technological University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 SOUDHA 2K25. All rights reserved. Designed by JNTU Kakinada.</p>
+        </div>
+    </footer>
+</body>
+</html>

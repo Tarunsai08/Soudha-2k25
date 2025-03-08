@@ -1,0 +1,445 @@
+{
+    "technicalEvents": [
+      {
+        "id": "lab-tour",
+        "name": "Lab Tour",
+        "tagline": "In this lab, we don't just test material - we engineer the future of safe and sustainable infrastructure.",
+        "shortDescription": "Unlock the wonders of Civil Engineering!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Lab Tour is Rs. 150 per head.",
+            "Registered participants will be guided through every laboratory within the JNTUK Civil department.",
+            "Detailed explanations of each experiment conducted in every lab will be provided during the tour.",
+            "At the end of the tour, participants will receive a lab manual.",
+            "This lab manual will be valuable and usable for competitive exams and placement opportunities."
+          ],
+          "registrationFee": 150,
+          "teamSize": 1,
+          "prizes": {
+            "firstPrize": "Certificate and Lab Manual",
+            "runnerUp": null
+          },
+          "coordinator": {
+            "name": "S. Syam Nandini",
+            "contactNumber": "9391540055"
+          }
+        }
+      },
+      {
+        "id": "model-exhibo",
+        "name": "Model Exhibo",
+        "tagline": "Step into the future of engineering—where innovation meets reality! Welcome to Model Exhibo, where our Civil Engineering minds transform ideas into structures that shape tomorrow.",
+        "shortDescription": "Where creativity meets engineering brilliance!",
+        "details": {
+          "instructions": [
+            "Model Exhibo likely refers to a model exhibition competition, where participants create and showcase the models of civil engineering structures.",
+            "The registration fee for Model Exhibo is Rs. 150 per team.",
+            "Each team consists of five members.",
+            "Teams are required to design and create a Civil Engineering model to be presented at the national Tech fest.",
+            "The winning model will be the one that is innovative, cost-effective, and highly beneficial to society."
+          ],
+          "registrationFee": 150,
+          "teamSize": 5,
+          "prizes": {
+            "firstPrize": "Cash prize worth Rs. 2000/- along with certificate and a Momentum award",
+            "runnerUp": "Cash prize worth Rs. 1000/- along with certificate and a momentum award"
+          },
+          "coordinator": {
+            "name": "D. Tejaswini Sindhura",
+            "contactNumber": "9392658075"
+          }
+        }
+      },
+      {
+        "id": "concrete-combat",
+        "name": "Concrete Combat",
+        "tagline": "Witness strength, precision, and innovation collide in Concrete Combat! Where the toughest mixes and the sharpest minds in Civil Engineering battle it out to build the strongest structures!",
+        "shortDescription": "Stronger, tougher, unbreakable – just like your ideas!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Concrete Combat competition is Rs. 200 per team, with each team consisting of four members.",
+            "Participants must cast an M60 grade concrete cube (150×150×150 mm) at their home or workspace before the event.",
+            "The casted cube must be cured in water for 7 days before the strength test.",
+            "Number of samples cubes of your own choice.",
+            "On March 22nd or 23rd, 2025, during the National Tech Fest (Soudha), the concrete cubes will be tested for load-bearing capacity.",
+            "The cube that bears the highest load will be declared the winner, and the winning and running team will receive a certificate and a memento."
+          ],
+          "registrationFee": 200,
+          "teamSize": 4,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": "Certificate and Memento"
+          },
+          "coordinator": {
+            "name": "A. Santoshi",
+            "contactNumber": "9642947134"
+          }
+        }
+      },
+      {
+        "id": "ppt",
+        "name": "PPT",
+        "tagline": "Step into the future of engineering—where innovation meets reality! Welcome to Model Exhibo, where our Civil Engineering minds transform ideas into structures that shape tomorrow.",
+        "shortDescription": "Present. Persuade. Prevail!",
+        "details": {
+          "instructions": [
+            "The registration fee for the PowerPoint Presentation competition is Rs. 150 per team, with each team consisting of two members.",
+            "Participants must prepare a PowerPoint presentation on a specified topic.",
+            "On the day of the event at Soudha, participants are required to explain their presentations.",
+            "The winner will be the team that delivers the best explanation and whose presentation is the most effective."
+          ],
+          "registrationFee": 150,
+          "teamSize": 2,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": "Certificate and Memento"
+          },
+          "coordinator": {
+            "name": "R. Swarupa",
+            "contactNumber": "9392658075"
+          }
+        }
+      },
+      {
+        "id": "poster-presentation",
+        "name": "Poster Presentation",
+        "tagline": "Every idea starts with a vision—welcome to the Poster Presentation, where Civil Engineering concepts come to life through research, innovation, and impactful solutions!",
+        "shortDescription": "Visualize ideas, inspire minds!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Poster Presentation is Rs.150 per team.",
+            "Each team must consist of two members.",
+            "Posters must be based on Civil Engineering domains.",
+            "Participants must present and explain their posters to the judges.",
+            "Winning and running teams will be awarded with exciting prizes. Plagarism will lead to disqualification."
+          ],
+          "registrationFee": 150,
+          "teamSize": 2,
+          "prizes": {
+            "firstPrize": "Exciting prizes (not specified)",
+            "runnerUp": "Exciting prizes (not specified)"
+          },
+          "coordinator": {
+            "name": "SK. MeharaJunisa",
+            "contactNumber": "9014990447"
+          }
+        }
+      },
+      {
+        "id": "elevate",
+        "name": "Elevate",
+        "tagline": "Rise above the ordinary—welcome to Elevate, where Civil Engineering innovations reach new heights through creativity, skill, and groundbreaking ideas!",
+        "shortDescription": "Rise above, innovate beyond!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Elevate competition is Rs. 150 per person.",
+            "An initial screening test will be conducted, which includes aptitude and domain-related questions.",
+            "Whether a group discussion is included will depend on the number of registrations.",
+            "Participants who qualify in the screening test will proceed to the interview round, which consists of both technical and HR interviews.",
+            "The participant who performs the best in the interview round will be declared the winner and will receive a certificate and a memento.",
+            "The Elevate competition is highly beneficial for placements, offering valuable exposure and opportunities to connect with industry professionals."
+          ],
+          "registrationFee": 150,
+          "teamSize": 1,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": null
+          },
+          "coordinator": {
+            "name": "T. Lakshmi Sudha",
+            "contactNumber": "9014990447"
+          }
+        }
+      },
+      {
+        "id": "autocad",
+        "name": "Auto CAD",
+        "tagline": "Precision meets design-welcome to the AutoCAD Challenge, where Civil Engineering visionaries turn ideas into detailed blueprints that shape the future!",
+        "shortDescription": "Design the future, one line at a time!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Auto CAD competition is Rs. 100 per person.",
+            "An initial screening test will be conducted for all participants.",
+            "Those who qualify in the screening test will be given two building plans, from which they must select one.",
+            "Participants must use AutoCAD to accurately draw the selected building plan within a limited time (time will be announced before the exam starts), ensuring correct dimensions.",
+            "The participant who creates the most accurate drawing in AutoCAD will be declared the winner and will receive a certificate and a memento.",
+            "We will provide our own systems(PC's) for your participation."
+          ],
+          "registrationFee": 100,
+          "teamSize": 1,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": null
+          },
+          "coordinator": {
+            "name": "E. Namratha",
+            "contactNumber": "9392034966"
+          }
+        }
+      },
+      {
+        "id": "geo-mensura",
+        "name": "Geo Mensura",
+        "tagline": "Measure, map, and master the land—welcome to Geo Mensura, where precision in surveying shapes the foundations of Civil Engineering excellence!",
+        "shortDescription": "Mapping precision, shaping the world!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Geo Mensura competition is Rs. 100 per team, with each team consisting of two members.",
+            "Each team will be assigned a specific area and provided with a surveying instrument(Total Station) to measure the given area.",
+            "Participants must use the instrument correctly to calculate the area accurately.",
+            "The team whose measured results match the exact area will be declared the winner and will receive a certificate and a memento.",
+            "If the surveying instrument gets damaged while in use, the participant will be held responsible for it."
+          ],
+          "registrationFee": 100,
+          "teamSize": 2,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": null
+          },
+          "coordinator": {
+            "name": "S. Sowmya",
+            "contactNumber": "9989793132"
+          }
+        }
+      },
+      {
+        "id": "master-builder",
+        "name": "Master Builder",
+        "tagline": "Brick by brick, idea by idea-welcome to Master Builder, where Civil Engineering brilliance meets hands-on construction to create structures that stand the test of time.",
+        "shortDescription": "Crafting concepts into reality!",
+        "details": {
+          "instructions": [
+            "The registration fee for the Master Builder competition is Rs. 100 per team, with each team consisting of two members.",
+            "Participants will be provided with materials on the spot to build a structure.",
+            "Teams must use the given materials to design and construct a strong structure.",
+            "The team whose structure bears the highest load will be declared as the winner."
+          ],
+          "registrationFee": 100,
+          "teamSize": 2,
+          "prizes": {
+            "firstPrize": "Certificate and Memento",
+            "runnerUp": "Certificate and Memento"
+          },
+          "coordinator": {
+            "name": "J. JANU",
+            "contactNumber": "9642947134"
+          }
+        }
+      },
+      {
+        "id": "paper-presentation",
+        "name": "Paper Presentation",
+        "tagline": "Engineering isn't just about structures; it's about building a sustainable future. Today, let's explore ideas that strengthen the world we live in!",
+        "shortDescription": "Building the future with innovative ideas and strong.",
+        "details": {
+          "instructions": [
+            "The registration fee for the Paper presentation competition is Rs. 100 per Head",
+            "Paper presentations must be based on Civil Engineering domains.",
+            "Participants must present and explain their papers to the judges.",
+            "Winning and running teams will be awarded with exciting prizes. Plagarism will lead to disqualification."
+          ],
+          "registrationFee": 100,
+          "teamSize": 1,
+          "prizes": {
+            "firstPrize": "Exciting prizes (not specified)",
+            "runnerUp": "Exciting prizes (not specified)"
+          },
+          "coordinator": {
+            "name": "P.Hari Shankar",
+            "contactNumber": "8978481484"
+          }
+        }
+      }
+    ],
+    "nonTechnicalEvents": [
+      {
+        "id": "free-fire",
+        "name": "Free Fire",
+        "tagline": "Gear up, squad up, and battle for glory—welcome to the Free Fire Event, where only the sharpest shooters and smartest strategists will claim victory!",
+        "shortDescription": "Survive, shoot, dominate!",
+        "details": {
+          "instructions": [
+            "Free fire tournament like it's name suggests is the competition between participant squads to showcase their skills in gaming.",
+            "Registration fee for Free fire tournament is ₹ 200 per squad.",
+            "Matches will be conducted in Class Squad mode.",
+            "Each squad consists of 4 members, 1 Extra Player. Every match is a knock out match if the team wins he can change the 4th player for next game.",
+            "Teams should attend 10 minutes early as later than that will be counted as disqualified.",
+            "Teams are required to follow the common rules of the games and not allowed to leave or disconnect as it will be counted as eliminated.",
+            "Hacking and teamups are not allowed and will also lead to disqualification and banning",
+            "After game begins we are not responsible for the network issues faced by the gamers and shall be borne by themselves.",
+            "In Game No character skills and No Gun attributes.",
+            "All the 5 Free fire ID's should be given before the starting of the tournament."
+          ],
+          "registrationFee": 200,
+          "teamSize": 4,
+          "prizes": {
+            "firstPrize": "Prize money of Rs. 1000/-",
+            "runnerUp": "Prize money of Rs. 500/-"
+          },
+          "coordinator": {
+            "name": "K. ShriramPrasad",
+            "contactNumber": "9959319609"
+          }
+        }
+      },
+      {
+        "id": "bgmi",
+        "name": "BGMI",
+        "tagline": "Drop in, gear up, and fight to be the last one standing—welcome to the PUBG Event, where only the best survive the battleground!",
+        "shortDescription": "One shot, one chance, one winner!",
+        "details": {
+          "instructions": [
+            "BGMI tournament like it's name suggests is the competition between participant squads to showcase their skills in gaming.",
+            "Registration fee for bgmi tournament is ₹ 200 per squad.",
+            "Matches will be conducted in classic mode.",
+            "Each squad consists of 4 members.",
+            "Teams should attend 10 minutes early as later than that will be counted as disqualified",
+            "Teams are required to follow the common rules of the games and not allowed to leave or disconnect as it will be counted as eliminated.",
+            "Hacking and teamups are not allowed and will also lead to disqualification and banning",
+            "After game begins we are not responsible for the network issues faced by the gamers and shall be borne by themselves."
+          ],
+          "registrationFee": 200,
+          "teamSize": 4,
+          "prizes": {
+            "firstPrize": "Prize money of Rs. 1000/-",
+            "runnerUp": "Prize money of Rs. 500/-"
+          },
+          "coordinator": {
+            "name": "K. ShriramPrasad",
+            "contactNumber": "9959319609"
+          }
+        }
+      },
+      {
+        "id": "photography",
+        "name": "Photography",
+        "tagline": "Gear up, squad up, and battle for glory—welcome to the Free Fire Event, where only the sharpest shooters and smartest strategists will claim victory!",
+        "shortDescription": "Freeze the moment, frame the magic!",
+        "details": {
+          "instructions": [
+            "Registration fee for Photography event is Rs. 0/-.",
+            "Theme of photograph could be any of your choice.",
+            "Complete the Google Form available on our website to register for the contest.",
+            "Submit your original photographs through the upload section provided in the form; ensure all entries are your own work, free from AI-generated content and plagiarism.",
+            "Share your submitted photographs on Instagram, tagging our official handle.",
+            "After a thorough review, winners will be selected based on the quality and originality of their submissions."
+          ],
+          "registrationFee": 0,
+          "teamSize": 1,
+          "prizes": {
+            "firstPrize": "Cash prize money worth Rs. 1000/-",
+            "runnerUp": null
+          },
+          "coordinator": {
+            "name": "N. Pardha Saradhi",
+            "contactNumber": "9014990447"
+          }
+        }
+      }
+    ],
+    "workshops": [
+      {
+        "id": "world-water-day",
+        "name": "Workshop on World Water Day",
+        "tagline": "Water is the elixir of life",
+        "shortDescription": "Sustainability starts with innovation. Let's build a greener future together!",
+        "details": {
+          "instructions": [
+            "Registration: Register through the official website before the event or opt for spot registration on the day. Registration fee for the workshop is Rs. 500 per head.",
+            "Confirmation: After registering, you'll receive a confirmation with venue details and time slots.",
+            "Timeliness: Arrive at the assigned venue on time as per your confirmation; late arrivals may not be accommodated.",
+            "Materials: Bring any specified materials mentioned in your workshop details.",
+            "Etiquette: Respect workshop guidelines, avoid disruptions, and engage constructively during sessions."
+          ],
+          "registrationFee": 500,
+          "teamSize": 1,
+          "speaker": "Dr. K.V.S.G Murali Krishna",
+          "coordinator": {
+            "name": "B. Nandi Vardhan",
+            "contactNumber": "8688637101"
+          }
+        }
+      },
+      {
+        "id": "bim",
+        "name": "BIM",
+        "tagline": "Design, visualize, and build smarter—welcome to BIM (Building Information Modeling), where Civil Engineering meets digital innovation for a smarter future!",
+        "shortDescription": "Transforming designs into smarter realities!",
+        "details": {
+          "instructions": [
+            "Register through the official website before the event or opt for spot registration on the day.",
+            "Confirmation : After registering, you'll recieve a confirmation with venue details and time slots.",
+            "Timeliness: Arrive at the assigned venue on time as per your confirmation; late arrivals may not be accommodated.",
+            "Materials: Bring any specified materials mentioned in your workshop details.",
+            "Etiquette: Respect workshop guidelines, avoid disruptions, and engage constructively during sessions."
+          ],
+          "registrationFee": 1200,
+          "teamSize": null,
+          "speaker": null,
+          "coordinator": {
+            "name": "R. Rajesh",
+            "contactNumber": "9391540055"
+          }
+        }
+      },
+      {
+        "id": "advanced-technologies-in-construction",
+        "name": "Advanced Technologies in Construction",
+        "tagline": "Shaping the future of construction—welcome to Advanced Technologies in Civil Engineering, where innovation and cutting-edge solutions redefine the way we build!",
+        "shortDescription": "Revolutionizing the way we build. Step into the future of construction!",
+        "details": {
+          "instructions": [
+            "Registration: Register through the official website before the event or opt for spot registration on the day. Registration fee for the workshop is Rs. 500 per head.",
+            "Confirmation: After registering, you'll receive a confirmation with venue details and time slots.",
+            "Timeliness: Arrive at the assigned venue on time as per your confirmation; late arrivals may not be accommodated.",
+            "Materials: Bring any specified materials mentioned in your workshop details.",
+            "Etiquette: Respect workshop guidelines, avoid disruptions, and engage constructively during sessions."
+          ],
+          "registrationFee": 500,
+          "teamSize": 1,
+          "speaker": null,
+          "coordinator": {
+            "name": "K. Subhash chandra",
+            "contactNumber": "8247620778"
+          }
+        }
+      }
+    ],
+    "symposiumInfo": {
+      "name": "SOUDHA 2K25",
+      "tagline": "Crafting your vision",
+      "dates": "15th & 16th March 2025",
+      "description": "A Two Day National Level Technical Symposium",
+      "organizer": {
+        "university": "JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY KAKINADA",
+        "college": "UNIVERSITY COLLEGE OF ENGINEERING KAKAINADA",
+        "department": "DEPARTMENT OF CIVIL ENGINEERING"
+      },
+      "contactInfo": [
+        {
+          "name": "JAGILINKI PAVAN KUMAR",
+          "contactNumber": "9347967873"
+        },
+        {
+          "name": "KOTIKALA SUBHASH CHANDRA",
+          "contactNumber": "8247620778"
+        },
+        {
+          "name": "BOBBILI ASLESH KUMAR",
+          "contactNumber": "9347177536"
+        },
+        {
+          "name": "TANNI RAJU",
+          "contactNumber": "9676470580"
+        },
+        {
+          "name": "BODDU RAVI",
+          "contactNumber": "7993883855"
+        }
+      ],
+      "socialMedia": {
+        "instagram": "@soudhajntuk",
+        "website": "www.soudha2k25.com"
+      }
+    }
+  }
